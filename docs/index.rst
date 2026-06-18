@@ -16,7 +16,31 @@
    notes/index
    tips/index
 
-`zk` is a plain text note-taking assistant that leverages the power of the command line.
+`zk` is a plain text note-taking assistant. It's built around the power and
+design of the Unix command line to make your knowledge generation and managment
+process highly interoperable and leveragable. 
+
+It can be used to build and maintain massive Zettelkasten collections,
+documentation sites, personal blogs, etc. The contents of this documentation
+site itself is written with the help of `zk`.
+
+`zk` itself is not a note writing or editing program itself. It helps you to
+manage your note collections and gives you powerful functionality to query
+relationships, contents and metadata of the information contained in those
+collections. There is a templating system and methods to dynamically inject data
+into those templates, depending on what inputs you provide. Such functionality
+makes `zk` equally useful for keeping meeting notes, a diary or a devlog at work
+or in your projects.
+
+To write your notes, you are free to use any program you like. There are also
+plugins for neovim <https://github.com/zk-org/zk-nvim>, emacs
+<https://codeberg.org/mcookly/zk-emacs> and VSCode
+<https://github.com/zk-org/zk-vscode> that integrate with the functionality of
+`zk`, creating a 'frontend/backend' model. `zk` can also work alongside/within
+an Obsidian vault.
+
+`zk` also ships with it's own LSP, allowing you to deeply integrate into other
+programs or lower level workflows. 
 
 Install as below and then... :doc:`get zettling <tips/getting-started>`!
 
@@ -62,7 +86,7 @@ You can install `the zk package <https://archlinux.org/packages/extra/x86_64/zk/
 
 Build from scratch:
 
-Make sure you have a working `Go 1.21+ installation <https://golang.org/>`_, then clone the repository:
+Make sure you have a working `Go 1.24+ installation <https://golang.org/>`_, then clone the repository:
 
 .. code-block:: sh
 
