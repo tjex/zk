@@ -10,6 +10,7 @@ import (
 	"github.com/zk-org/zk/internal/adapter/term"
 	"github.com/zk-org/zk/internal/core"
 	"github.com/zk-org/zk/internal/util/opt"
+	"github.com/zk-org/zk/internal/adapter/editor"
 	stringsutil "github.com/zk-org/zk/internal/util/strings"
 )
 
@@ -98,7 +99,7 @@ func (f *NoteFilter) Apply(notes []core.ContextualNote) ([]core.ContextualNote, 
 			bindings = append(bindings, Binding{
 				Keys:        newBinding,
 				Description: "create a note with the query as title" + suffix,
-				Action:      fmt.Sprintf(`become("%s" new "%s" --title {q} < /dev/tty > /dev/tty)`, zkBin, dir.Path),
+				Action:      fmt.Sprintf(`become("%s" new "%s" --title {q} "%s" > /dev/tty)`, zkBin, dir.Path, editor.CMD_SUFFIX),
 			})
 		}
 	}
